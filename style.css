@@ -1,9 +1,10 @@
 :root {
-    --prim: #02fcce;
-    --prim-dark: #00a083;
-    --sec: #ff3701;
-    --sec-dark: #ca2d02;
-    --bg: #202020;
+    --primary: #21E6C1;
+    --primary-darker: #278EA5;
+    --background: #222831;
+    --complimentary: #1F4287;
+    --font-color: #eee;
+    --font-color-darker: #ddd;
 }
 
 * {
@@ -13,113 +14,29 @@
 }
 
 html {
-    background-color: var(--bg);
-    font-family: 'VT323', Arial, Helvetica, sans-serif;
-    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background);
 }
 
-section {
-    position: relative;
+#starter {
+    max-width: 1200px;
     min-height: 100vh;
-    max-width: 900px;
     margin: auto;
-    padding: 10px;
-    z-index: 10;
-}
-
-.bg-image {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20%;
-    max-width: 800px;
-    transition: ease .5s
-}
-
-.bg-image img {
-    max-width: 100%;
-}
-
-.ray-div {
-    position: fixed;
-    top: 20%;
-    right: 33%;
-    max-width: 800px;
-}
-
-.ray {
-    border-left: 100vmin solid var(--prim);
-    border-bottom: 50px solid transparent;
-    border-top: 50px solid transparent;
-    height: 450px;
-    width: 0;
-    opacity: 0.7;
-    filter: blur(50px);
-    transition: ease .5s
-}
-
-.f-center {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.d-flex { display: flex; }
-.align-center { align-items: center; }
-.justify-center { justify-content: center; }
-.f-column { flex-direction: column; }
-
-section h1 {
-    font-size: 80px;
-    margin-bottom: 20px;
+.starter-name {
+    color: var(--font-color-darker);
+    font-size: 25px;
+    font-weight: lighter;
+    letter-spacing: 15px;
 }
 
-section h1:not(:first-child) { margin-top: 20px; }
-
-section a {
-    text-decoration: none;
-    color: black;
-    font-size: 30px;
-}
-
-section p {
-    font-size: 30px;
-    max-width: 600px;
-    color: #101010;
-}
-
-#home .spacer {
-    margin-top: 150px;
-}
-
-#info .spacer {
-    margin-top: 100px;
-}
-
-#projects {
-    max-width: 1200px;
-}
-
-.project-bg {
-    max-width: 100%;
-    width: auto;
-    height: auto;
-}
-
-.project-text {
-    max-width: 800px;
-    width: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.project-text h1, .project-text p {
-    color: white;
-}
-
-@media screen and (max-width: 800px) {
-    .bg-image {
-        right: 0;
-    }  
+.starter-header {
+    color: var(--font-color);
+    font-size: 100px;
+    font-weight: lighter;
 }
