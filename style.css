@@ -17,6 +17,7 @@ html {
     font-family: 'Roboto', sans-serif;
     background-color: var(--background);
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 #starter {
@@ -66,7 +67,7 @@ html {
 }
 
 .starter-menu-item a:hover {
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 .circle {
@@ -77,6 +78,7 @@ html {
     border: 2px solid var(--complimentary);
     border-radius: 50%;
     filter: blur(5px);
+    animation: circleOnLoad .5s ease-out;
 }
 
 .circle-sm {
@@ -109,4 +111,15 @@ html {
 .github-light {
     width: 35px;
     margin-top: 32px;
+}
+
+@keyframes circleOnLoad {
+    0% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
 }
