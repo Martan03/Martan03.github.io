@@ -16,9 +16,12 @@
 html {
     font-family: 'Roboto', sans-serif;
     background-color: var(--background);
+    scroll-behavior: smooth;
 }
 
 #starter {
+    z-index: 10;
+    position: relative;
     max-width: 1200px;
     min-height: 100vh;
     margin: auto;
@@ -39,4 +42,60 @@ html {
     color: var(--font-color);
     font-size: 100px;
     font-weight: lighter;
+}
+
+.starter-menu {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.starter-menu a {
+    text-decoration: none;
+    color: var(--font-color);
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid var(--complimentary);
+    border-radius: 50%;
+    filter: blur(5px);
+}
+
+.circle-sm {
+    width: 500px;
+    height: 500px;
+}
+
+.circle-m {
+    width: 1000px;
+    height: 1000px;
+    filter: blur(8px);
+}
+
+.socials {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 10px;
+}
+
+.socials hr {
+    transform: rotate(90deg);
+    height: 3px;
+    width: 50px;
+    border: 0;
+    background-color: var(--primary);
+    margin-left: -7px;
+}
+
+.github-light {
+    width: 35px;
+    margin-top: 32px;
 }
