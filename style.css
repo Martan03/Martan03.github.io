@@ -51,11 +51,22 @@ html {
     justify-content: space-between;
 }
 
-.starter-menu a {
+.starter-menu-item {
+    width: 33.3%;
+    display: flex;
+    justify-content: center;
+}
+
+.starter-menu-item a {
     text-decoration: none;
     color: var(--font-color);
     font-weight: lighter;
     font-size: 20px;
+    transition: .3s ease-out;
+}
+
+.starter-menu-item a:hover {
+    letter-spacing: 3px;
 }
 
 .circle {
