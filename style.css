@@ -17,6 +17,11 @@ html {
     font-family: 'Roboto', sans-serif;
     background-color: var(--background);
     scroll-behavior: smooth;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -38,12 +43,14 @@ html {
     font-size: 25px;
     font-weight: lighter;
     letter-spacing: 15px;
+    text-align: center;
 }
 
 .starter-header {
     color: var(--font-color);
     font-size: 100px;
     font-weight: lighter;
+    text-align: center;
 }
 
 .starter-menu {
@@ -73,7 +80,7 @@ html {
 
 .circle {
     position: absolute;
-    top: 50%;
+    top: 50vh;
     left: 50%;
     transform: translate(-50%, -50%);
     border: 2px solid var(--complimentary);
@@ -134,4 +141,12 @@ html {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+@media screen and (max-width: 600px) {
+    .starter-header {
+        font-size: 17vw;
+    }
+
+
 }
