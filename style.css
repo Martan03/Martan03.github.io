@@ -78,6 +78,31 @@ html {
     letter-spacing: 2px;
 }
 
+#about {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 100px;
+    padding: 10px;
+    z-index: 10;
+    position: relative;
+}
+
+.about-header {
+    font-size: 60px;
+    font-weight: lighter;
+    color: var(--font-color);
+}
+
+.about-text {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 2rem;
+    color: var(--font-color-darker);
+}
+
 .circle {
     position: absolute;
     top: 50vh;
@@ -140,6 +165,18 @@ html {
     100% {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .about-img img {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    #about {
+        flex-direction: column;
     }
 }
 
