@@ -178,12 +178,14 @@ html {
     #about {
         flex-direction: column;
     }
+
+    .about-header {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 600px) {
     .starter-header {
         font-size: 17vw;
     }
-
-
 }
