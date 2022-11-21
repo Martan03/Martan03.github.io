@@ -5,6 +5,7 @@
     --complimentary: #1F4287;
     --font-color: #eee;
     --font-color-darker: #ddd;
+    --input-color: #384656;
 }
 
 * {
@@ -128,6 +129,15 @@ html {
     color: var(--font-color-darker);
 }
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input:not(:first-child) {
+    margin-top: 5px;
+}
+
 .circle {
     position: absolute;
     top: 50vh;
@@ -170,6 +180,56 @@ html {
 .github-light {
     width: 35px;
     margin-top: 32px;
+}
+
+.form-label {
+    color: #fff;
+    opacity: 85%;
+    margin-bottom: 5px;
+}
+
+.form-label span {
+    color: #ff0000;
+    opacity: 95%;
+}
+
+.form-control {
+    max-width: 400px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.25rem 0.4rem;
+    color: rgba(255, 255, 255, 0.9);
+    background-color: var(--input-color);
+    background-clip: padding-box;
+    border: 1px solid var(--input-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.5rem;
+    transition: 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    color: rgba(255, 255, 255, 0.9);
+    background-color: var(--input-color);
+    border-color: var(--primary);
+    outline: 0;
+    box-shadow: 0 0 0.2rem 0.2rem var(--primary-darker);
+    caret-color: white;
+}
+
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover, 
+.form-control:-webkit-autofill:focus, 
+.form-control:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px var(--input-color) inset;
+    box-shadow: 0 0 0px 1000px var(--input-color) inset;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+.invalid {
+    border: red;
+    box-shadow: 0 0 0.2rem 0.2rem rgba(255, 0, 0, 0.5)
 }
 
 @keyframes circleOnLoad {
