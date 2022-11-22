@@ -153,6 +153,7 @@ html {
 
 .projects-wrapper {
     display: flex;
+    gap: 10px;
 }
 
 .projects-card {
@@ -161,10 +162,6 @@ html {
     border-radius: 20px;
     transition: .3s ease;
     text-decoration: none;
-}
-
-.projects-card:not(:first-child) {
-    margin-left: 10px;
 }
 
 .projects-card:hover {
@@ -368,6 +365,14 @@ textarea {
 }
 
 @media screen and (max-width: 750px) {
+    .projects-wrapper {
+        flex-direction: column;
+    }
+
+    .projects-card {
+        max-width: 100%;
+    }
+    
     #about {
         flex-direction: column;
     }
