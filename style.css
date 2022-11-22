@@ -1,7 +1,8 @@
 :root {
     --primary: #21E6C1;
-    --primary-darker: #278EA5;
+    --primary-darker: #12C8A5;
     --background: #222831;
+    --complimentary-lighter: #278EA5;
     --complimentary: #1F4287;
     --font-color: #eee;
     --font-color-darker: #ddd;
@@ -129,13 +130,41 @@ html {
     color: var(--font-color-darker);
 }
 
+#contact {
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#contact h2 {
+    color: var(--font-color-darker);
+    font-weight: lighter;
+}
+
+#contact h1 {
+    font-size: 60px;
+    font-weight: lighter;
+    color: var(--font-color);
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
-.contact-form input:not(:first-child) {
-    margin-top: 5px;
+.contact-submit {
+    background-color: var(--primary);
+    border: 1px solid var(--primary-darker);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.25rem 0.4rem;
+    transition: .3s ease;
+}
+
+.contact-submit:hover {
+    background-color: var(--primary-darker);
 }
 
 .circle {
@@ -194,7 +223,7 @@ html {
 }
 
 .form-control {
-    max-width: 400px;
+    width: 100%;
     font-size: 1rem;
     line-height: 1.5rem;
     padding: 0.25rem 0.4rem;
@@ -225,6 +254,12 @@ html {
     -webkit-box-shadow: 0 0 0px 1000px var(--input-color) inset;
     box-shadow: 0 0 0px 1000px var(--input-color) inset;
     -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+textarea {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 .invalid {
