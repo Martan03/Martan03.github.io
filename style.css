@@ -210,10 +210,43 @@ html {
     color: var(--font-color);
 }
 
+.contact-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.email-copy {
+    height: 174px;
+    width: 174px;
+    border-radius: 20px;
+    background-color: var(--input-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.email-copy:hover {
+    background-color: var(--input-color-darker);
+}
+
+.email-copy img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.email-copy p {
+    font-size: 18px;
+    color: var(--font-color-darker);
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
 }
 
 .contact-submit {
@@ -384,6 +417,28 @@ textarea {
 
     .about-img {
         margin: 40px 0;
+    }
+
+    .contact-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .email-copy {
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+        border-radius: 10px;
+    }
+
+    .email-copy img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+
+    .email-copy p {
+        font-size: 20px;
+        margin-left: 10px;
     }
 }
 

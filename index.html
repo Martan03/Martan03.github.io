@@ -19,7 +19,7 @@
             <section id="starter">
                 <p class="starter-name">Martin Slezák</p>
                 <h1 class="starter-header">WEB DEVELOPER</h1>
-                <div class="starter-menu">
+                <div class="starter-menu" id="test">
                     <div class="starter-menu-item">
                         <a href="#about">ABOUT</a>
                     </div>
@@ -68,10 +68,15 @@
             <section id="contact">
                 <h2>GET IN TOUCH</h2>
                 <h1>Contact me</h1>
-                <div class="contact-form">
-                    <input class="form-control email" type="email" placeholder="E-mail">
-                    <textarea class="form-control message" rows="5" placeholder="Message"></textarea>
-                    <button class="contact-submit" onclick="sendEmail()">Send</button>
+                <div class="contact-wrapper">
+                    <div class="contact-form">
+                        <textarea class="form-control message" rows="5" placeholder="Message"></textarea>
+                        <button class="contact-submit" onclick="sendEmail()">Send</button>
+                    </div>
+                    <div class="email-copy">
+                        <img src="Assets/email.svg" alt="e-mail">
+                        <p class="copy-email-text">Copy e-mail</p>
+                    </div>
                 </div>
             </section>
 
