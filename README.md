@@ -7,6 +7,8 @@ It was created using HTML, CSS and little bit of Vanilla JS.
 TODO:
 Add some animations (on scroll, etc.)
 
-Links:  
-[Author GitHub](https://github.com/Martan03)  
-[Author website](https://martan03.github.io/Portfolio/)
+## Links
+
+- **Author:** [Martan03](https://github.com/Martan03)
+- **GitHub repository:** [Portfolio](https://github.com/Martan03/Portfolio)
+- **Author website:** [martan03.github.io/Portfolio](https://martan03.github.io/Portfolio/)
