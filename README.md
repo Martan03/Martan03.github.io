@@ -10,5 +10,5 @@ Add some animations (on scroll, etc.)
 ## Links
 
 - **Author:** [Martan03](https://github.com/Martan03)
-- **GitHub repository:** [Portfolio](https://github.com/Martan03/Portfolio)
+- **GitHub repository:** [Portfolio](https://github.com/Martan03)
 - **Author website:** [martan03.github.io/Portfolio](https://martan03.github.io/Portfolio/)
