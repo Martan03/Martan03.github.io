@@ -1,100 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/x-icon" href="Assets/character.png">
-        <title>Martin Slezák</title>
-    </head>
-    
-    <body>
-        <div class="wrapper">
-            <div class="circle circle-sm"></div>
-            <div class="circle circle-m"></div>
-            <section id="starter">
-                <p class="starter-name">Martin Slezák</p>
-                <h1 class="starter-header">DEVELOPER</h1>
-                <div class="starter-menu" id="test">
-                    <div class="starter-menu-item">
-                        <a href="#about">ABOUT</a>
-                    </div>
-                    <div class="starter-menu-item">
-                        <a href="#projects">PROJECTS</a>
-                    </div>
-                    <div class="starter-menu-item">
-                        <a href="#contact">CONTACT</a>
-                    </div>
-                </div>
-            </section>
-    
-            <section id="about">
-                <div class="about-img">
-                    <div class="about-img-bg"></div>
-                    <img src="Assets/character.png" alt="character">
-                </div>
-                <div class="about-content">
-                    <h1 class="about-header">About me:</h1>
-                    <p class="about-text">
-                        I am 19 years old and I am studying at university, 
-                        specifically at the Faculty of Computer Science in Brno.
-                        Programming is my hobby and dream job in one.
-                        I have been learning programming for about 6 years now.
-                        I am mainly involved in web development, 
-                        but I am expanding my skills in areas such as desktop
-                        application development.
-                    </p>
-                </div>
-            </section>
-    
-            <section id="projects">
-                <h2>PORTFOLIO</h2>
-                <h1>Recent projects</h1>
-                <div class="projects-wrapper">
-                    <a class="projects-card" href="https://re-ply.cz/" target="_blank">
-                        <div class="projects-card-img">
-                            <img src="Assets/reply.png" alt="image">
-                        </div>
-                        <h3>RE-PLY</h3>
-                        <p>E-commerce website</p>
-                    </a>
-                    <a class="projects-card" href="https://parallelclimbing.com/" target="_blank">
-                        <div class="projects-card-img">
-                            <img src="Assets/parallelClimbing.png" alt="image">
-                        </div>
-                        <h3>PARALLEL CLIMBING</h3>
-                        <p>Website about climbing race</p>
-                    </a>
-                </div>
-            </section>
-
-            <section id="contact">
-                <h2>GET IN TOUCH</h2>
-                <h1>Contact me</h1>
-                <div class="contact-wrapper">
-                    <div class="contact-form">
-                        <textarea class="form-control message" rows="5" placeholder="Message"></textarea>
-                        <button class="contact-submit" onclick="sendEmail()">Send</button>
-                    </div>
-                    <div class="email-copy">
-                        <img src="Assets/email.svg" alt="e-mail">
-                        <p class="copy-email-text">Copy e-mail</p>
-                    </div>
-                </div>
-            </section>
-
-            <div class="socials">
-                <hr />
-                <a href="https://github.com/Martan03" target="_blank">
-                    <img class="github-light" src="Assets/github-logo.svg" alt="github">
-                </a>
-            </div>
-        </div>
-
-        <script src="app.js"></script>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Martin Slezák</title>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/main.jsx"></script>
+	</body>
 </html>

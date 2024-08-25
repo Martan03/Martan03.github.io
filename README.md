@@ -1,14 +1,16 @@
-# Portfolio
+# Martan03.github.io
 
-I wanted to have my own website for so long, so I created one. My goal was to build simple one page website.
+## Table of Contents
+{{ mdcon }}
 
-It was created using HTML, CSS and little bit of Vanilla JS.
+## Installation
 
-TODO:
-Add some animations (on scroll, etc.)
+## Usage
+
+## Detailed description
 
 ## Links
 
 - **Author:** [Martan03](https://github.com/Martan03)
-- **GitHub repository:** [Portfolio](https://github.com/Martan03/martan03.github.io)
-- **Author website:** [martan03.github.io/Portfolio](https://martan03.github.io)
+- **GitHub repository:** [Martan03.github.io](https://github.com/Martan03/Martan03.github.io)
+- **Author website:** [martan03.github.io](https://martan03.github.io)
