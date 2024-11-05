@@ -8,10 +8,26 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/x-icon" href="Assets/character.png">
-        <title>Martin Slezák</title>
+        <link rel="icon" type="image/x-icon" href="assets/character.png">
+        <title>Martin Slezák | Developer</title>
+        <meta
+            name="description"
+            content="Experienced web developer and Rust enthusiast. Check out my projects and get in touch!"
+        >
+        <meta
+            name="keywords"
+            content="Martin Slezák, developer, websites, martan03, frontend, backend"
+        >
+        <meta property="og:title" content="Martin Slezák | Developer">
+        <meta
+            property="og:description"
+            content="Experienced web developer and Rust enthusiast. Check out my projects and get in touch!"
+            id="meta-og-description"
+        >
+        <meta property="og:image" content="assets/character.png">
+        <meta property="og:url" content="https://martan03.github.io">
     </head>
-    
+
     <body>
         <div class="wrapper">
             <div class="circle circle-sm"></div>
@@ -19,82 +35,156 @@
             <section id="starter">
                 <p class="starter-name">Martin Slezák</p>
                 <h1 class="starter-header">DEVELOPER</h1>
-                <div class="starter-menu" id="test">
-                    <div class="starter-menu-item">
+                <nav>
+                    <div>
                         <a href="#about">ABOUT</a>
                     </div>
-                    <div class="starter-menu-item">
+                    <div>
                         <a href="#projects">PROJECTS</a>
                     </div>
-                    <div class="starter-menu-item">
+                    <div>
                         <a href="#contact">CONTACT</a>
                     </div>
-                </div>
+                </nav>
             </section>
-    
+
             <section id="about">
                 <div class="about-img">
                     <div class="about-img-bg"></div>
-                    <img src="Assets/character.png" alt="character">
+                    <img
+                        src="assets/character.webp"
+                        alt="animated portrait of Martin Slezák"
+                        loading="lazy"
+                    >
                 </div>
                 <div class="about-content">
                     <h1 class="about-header">About me:</h1>
-                    <p class="about-text">
-                        I am 19 years old and I am studying at university, 
+                    <p class="about-text" id="about-text">
+                        I am 19 years old and I am studying at university,
                         specifically at the Faculty of Computer Science in Brno.
                         Programming is my hobby and dream job in one.
                         I have been learning programming for about 6 years now.
-                        I am mainly involved in web development, 
+                        I am mainly involved in web development,
                         but I am expanding my skills in areas such as desktop
                         application development.
+
+                        Lately I've been enjoying rust a lot, where I make
+                        various utilities or applications with TUI.
                     </p>
                 </div>
             </section>
-    
+
             <section id="projects">
                 <h2>PORTFOLIO</h2>
-                <h1>Recent projects</h1>
-                <div class="projects-wrapper">
-                    <a class="projects-card" href="https://re-ply.cz/" target="_blank">
-                        <div class="projects-card-img">
-                            <img src="Assets/reply.png" alt="image">
-                        </div>
-                        <h3>RE-PLY</h3>
-                        <p>E-commerce website</p>
-                    </a>
-                    <a class="projects-card" href="https://parallelclimbing.com/" target="_blank">
-                        <div class="projects-card-img">
-                            <img src="Assets/parallelClimbing.png" alt="image">
-                        </div>
-                        <h3>PARALLEL CLIMBING</h3>
-                        <p>Website about climbing race</p>
-                    </a>
-                </div>
+
+                <section>
+                    <h1>Web projects</h1>
+                    <div class="projects-wrapper">
+                        <a
+                            class="projects-card"
+                            href="https://re-ply.cz/"
+                            target="_blank"
+                        >
+                            <div class="projects-card-img">
+                                <img src="assets/reply.webp" alt="image">
+                            </div>
+                            <h2>RE-PLY</h2>
+                            <p>E-commerce website</p>
+                        </a>
+                        <a
+                            class="projects-card"
+                            href="https://parallelclimbing.com/"
+                            target="_blank"
+                        >
+                            <div class="projects-card-img">
+                                <img
+                                    src="assets/parallelClimbing.webp"
+                                    alt="image"
+                                >
+                            </div>
+                            <h2>PARALLEL CLIMBING</h2>
+                            <p>Website about climbing race</p>
+                        </a>
+                    </div>
+                </section>
+
+                <section>
+                    <h1>Utilities & libraries</h1>
+                    <div class="projects-wrapper">
+                        <a
+                            class="projects-card"
+                            href="https://github.com/Martan03/makeit"
+                            target="_blank"
+                        >
+                            <div class="projects-card-img">
+                                <img src="assets/makeit.webp" alt="image">
+                            </div>
+                            <h2>MAKEIT</h2>
+                            <p>Templating tool written in Rust 🦀</p>
+                        </a>
+                        <a
+                            class="projects-card"
+                            href="https://github.com/Martan03/termint"
+                            target="_blank"
+                        >
+                            <div class="projects-card-img">
+                                <img
+                                    src="assets/termint.webp"
+                                    alt="image"
+                                >
+                            </div>
+                            <h2>TERMINT</h2>
+                            <p>Rust crate for colored printing and TUIs </p>
+                        </a>
+                    </div>
+                </section>
             </section>
 
             <section id="contact">
                 <h2>GET IN TOUCH</h2>
                 <h1>Contact me</h1>
-                <div class="contact-wrapper">
-                    <div class="contact-form">
-                        <textarea class="form-control message" rows="5" placeholder="Message"></textarea>
-                        <button class="contact-submit" onclick="sendEmail()">Send</button>
-                    </div>
-                    <div class="email-copy">
-                        <img src="Assets/email.svg" alt="e-mail">
-                        <p class="copy-email-text">Copy e-mail</p>
-                    </div>
-                </div>
+                <p>
+                    If you like my work and would like to work with me, you can
+                    write me an email:
+                    <a href="mailto:martinslezak03@gmail.com">
+                        martinslezak03@gmail.com
+                    </a>
+                </p>
             </section>
 
-            <div class="socials">
-                <hr />
-                <a href="https://github.com/Martan03" target="_blank">
-                    <img class="github-light" src="Assets/github-logo.svg" alt="github">
-                </a>
-            </div>
+            <footer>
+                <p>Copyright © Martin Slezák. All rights reserved.</p>
+            </footer>
+        </div>
+
+        <div class="socials">
+            <div class="line first"></div>
+            <a
+                href="https://www.linkedin.com/in/martin-slez%C3%A1k-67452a2b3/"
+                target="_blank"
+            >
+                <img src="assets/linkedin-logo.png" alt="linked-in">
+            </a>
+            <div class="line"></div>
+            <a href="https://github.com/Martan03" target="_blank">
+                <img src="assets/github-logo.svg" alt="github">
+            </a>
         </div>
 
         <script src="app.js"></script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Martin Slezák",
+                "jobTitle": "Developer",
+                "url": "https://martan03.github.io",
+                "sameAs": [
+                    "https://www.linkedin.com/in/martin-slez%C3%A1k-67452a2b3/",
+                    "https://github.com/Martan03"
+                ],
+                "email": "mailto:martinslezak03@gmail.com"
+            }
+        </script>
     </body>
 </html>
