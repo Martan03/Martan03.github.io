@@ -8,6 +8,7 @@
     --font-color: #eee;
     --font-color-darker: #ddd;
     --font-color-dark: #bbb;
+    --input-color-light: #45586d;
     --input-color: #384656;
     --input-color-darker: #303e4e;
     --footer-fg: #A0B7C0;
@@ -158,6 +159,10 @@ nav > div > a:hover {
     margin-bottom: 20px;
 }
 
+#projects:hover .projects-card > .card-border {
+    opacity: 1;
+}
+
 .projects-wrapper {
     display: flex;
     gap: 10px;
@@ -165,15 +170,57 @@ nav > div > a:hover {
 
 .projects-card {
     flex: 1 1 calc(50% - 10px);
-    background-color: var(--input-color);
+    background-color: var(--input-color-light);
     border-radius: 20px;
     transition: .3s ease;
     text-decoration: none;
     max-width: 100%;
+    position: relative;
 }
 
-.projects-card:hover {
+.projects-card::before,
+.projects-card > .card-border {
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.projects-card::before {
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+    );
+    z-index: 3;
+}
+
+.projects-card:hover::before {
+    opacity: 1;
+}
+
+.projects-card > .card-border {
+    background: radial-gradient(
+        400px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.3),
+        transparent 40%
+    );
+    z-index: 1;
+}
+
+.projects-card > .card-content {
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
     background-color: var(--input-color-darker);
+    border-radius: inherit;
+    margin: 1px;
+    position: relative;
+    z-index: 2;
 }
 
 .projects-card-img {

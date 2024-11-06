@@ -56,3 +56,14 @@ document.addEventListener('mousemove', e => {
             `translate(-50%, -50%) translate(${moveX}px, ${moveY}px)`;
     });
 });
+
+document.getElementById('projects').onmousemove = e => {
+    for (const card of document.querySelectorAll('.projects-card')) {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+    }
+}
