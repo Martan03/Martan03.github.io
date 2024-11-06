@@ -47,7 +47,7 @@ const socketGetPos = (rect, angle, moveDistance) => {
 
 const mouseMove = (e, element, factor, getPos) => {
     const rect = element.getBoundingClientRect();
-    if (rect.top < 0 || rect.bottom > window.innerHeight) {
+    if (rect.bottom < 0 || rect.top > window.innerHeight) {
         return;
     }
 
