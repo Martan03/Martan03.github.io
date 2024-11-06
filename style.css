@@ -33,7 +33,6 @@ html {
 }
 
 #starter {
-    z-index: 10;
     position: relative;
     max-width: 1200px;
     min-height: 100vh;
@@ -43,6 +42,13 @@ html {
     align-items: center;
     justify-content: center;
     animation: opacityAnimation .7s ease;
+}
+
+#starter > .starter-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .starter-name {
@@ -112,6 +118,35 @@ nav > div > a:hover {
     transform: rotate(-20deg);
     border-radius: 25%;
     transition: .3s ease transform;
+}
+
+.about-img > .eye {
+    width: 4%;
+    height: 6%;
+    background-color: white;
+    position: absolute;
+    z-index: 11;
+    border-radius: 10px;
+    top: 44.7%;
+}
+
+.about-img > .eye.left {
+    left: 39.7%;
+}
+
+.about-img > .eye.right {
+    left: 57.1%;
+}
+
+.about-img > .eye > .socket {
+    width: 50%;
+    height: 45%;
+    background-color: rgb(34, 34, 34);
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .about-img img {

@@ -28,33 +28,54 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const circles = document.querySelectorAll('.circle');
-const baseMoveFactor = 0.09;
+const sockets = document.querySelectorAll('.socket');
+const starterContent = document.querySelector('.starter-content');
+
+const starterGetPos = (_rect, angle, moveDistance) => {
+    return [ Math.cos(angle) * moveDistance, Math.sin(angle) * moveDistance ];
+}
+
+const socketGetPos = (rect, angle, moveDistance) => {
+    const offsetX = rect.width * 0.5;
+    const offsetY = rect.height / 0.45 * 0.275;
+
+    return [
+        Math.min(Math.max(Math.cos(angle) * moveDistance, -offsetX), offsetX),
+        Math.min(Math.max(Math.sin(angle) * moveDistance, -offsetY), offsetY)
+    ];
+}
+
+const mouseMove = (e, element, factor, getPos) => {
+    const rect = element.getBoundingClientRect();
+    if (rect.top < 0 || rect.bottom > window.innerHeight) {
+        return;
+    }
+
+    const circleX = rect.left + rect.width / 2;
+    const circleY = rect.top + rect.height / 2;
+
+    const deltaX = e.clientX - circleX;
+    const deltaY = e.clientY - circleY;
+
+    const angle = Math.atan2(deltaY, deltaX);
+
+    const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    const movementFactor = factor * (40000 / (rect.width * rect.width));
+    const moveDistance = distance * movementFactor;
+
+    const [x, y] = getPos(rect, angle, moveDistance);
+    element.animate({
+        transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
+    }, { duration: 1000, fill: 'forwards' });
+}
+
 document.addEventListener('mousemove', e => {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-
     circles.forEach(circle => {
-        const rect = circle.getBoundingClientRect();
-        const circleX = rect.left + rect.width / 2;
-        const circleY = rect.top + rect.height / 2;
-
-        const deltaX = mouseX - circleX;
-        const deltaY = mouseY - circleY;
-
-        const angle = Math.atan2(deltaY, deltaX);
-
-        const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-
-        const size = rect.width;
-        const movementFactor = baseMoveFactor * (40000 / (size * size));
-
-        const moveDistance = distance * movementFactor;
-        const moveX = Math.cos(angle) * moveDistance;
-        const moveY = Math.sin(angle) * moveDistance;
-
-        circle.style.transform =
-            `translate(-50%, -50%) translate(${moveX}px, ${moveY}px)`;
+        mouseMove(e, circle, 0.09, starterGetPos);
     });
+    mouseMove(e, starterContent, 0.05, starterGetPos)
+
+    sockets.forEach(socket => mouseMove(e, socket, 0.00003, socketGetPos));
 });
 
 document.getElementById('projects').onmousemove = e => {
