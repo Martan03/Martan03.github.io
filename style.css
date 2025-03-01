@@ -199,12 +199,14 @@ nav > div > a:hover {
 }
 
 .projects-wrapper {
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
 .projects-card {
-    flex: 1 1 calc(50% - 10px);
+    width: calc(50% - 10px);
     background-color: var(--input-color-light);
     border-radius: 20px;
     transition: .3s ease;
@@ -414,15 +416,13 @@ footer {
     }
 }
 
-@media screen and (max-width: 750px) {
-    .projects-wrapper {
-        flex-direction: column;
-    }
-
+@media screen and (max-width: 805px) {
     .projects-card {
-        max-width: 100%;
+        width: calc(100% - 10px);
     }
+}
 
+@media screen and (max-width: 750px) {
     #about {
         flex-direction: column;
     }
